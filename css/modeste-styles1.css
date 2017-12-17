@@ -186,32 +186,6 @@ a#menu-button:hover {
 
 
 
-/******************
-Nav Social Media Bar
-*******************/
-
-
-
-
-.socialMedia {
-	width: 118px;
-	height: 35px;
-	padding: 10px;
-	margin-top: -27px;
-	/*border: 2px solid #F3C;*/
-}
-
-.socialMedia li {
-	width: 25px;
-	display: inline-block;
-	margin:-9px auto 0; 
-	
-}
-	
-
-.socialMedia li .mediaIcons {
-	margin: 0;
-}
 
 
 
@@ -247,6 +221,32 @@ Nav Social Media Bar
 
 
 
+/******************
+Nav Social Media Bar
+*******************/
+
+
+
+
+.socialMedia {
+	width: 118px;
+	height: 35px;
+	padding: 10px;
+	margin-top: -27px;
+	/*border: 2px solid #F3C;*/
+}
+
+.socialMedia li {
+	width: 25px;
+	display: inline-block;
+	margin:-9px auto 0; 
+	
+}
+	
+
+.socialMedia li .mediaIcons {
+	margin: 0;
+}
 
 
 

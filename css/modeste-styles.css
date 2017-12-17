@@ -1,5 +1,5 @@
 /****************************
-Base Element Styles
+Element Styles
 *****************************/
 * {
    box-sizing: border-box;	
@@ -9,7 +9,7 @@ Base Element Styles
 
 
 body {
-	   font: normal 1em/1.6 sans-serif;
+	   font: normal 1em/1.6 'Montserrat', sans-serif;
 	   background: #fff;
 	  
 }
@@ -20,8 +20,21 @@ body {
 
 h1,
 h2,
-h3 {
-   margin: 0;
+h3,
+a,
+footer{
+    margin: 0;
+	font-family: 'Poiret One', cursive, sans-serif;
+	color: #2f0707;
+	text-shadow: 0 1px 2px #000;
+}
+
+
+p {
+	font-size: 0.95em;
+	margin-bottom: 1.8em;
+	color: #160606;
+	
 }
 
 
@@ -33,6 +46,10 @@ img {
  margin-bottom: 1.25em;
  /*border: 2px solid #CF3;*/	
 }
+
+
+
+
 
 
 
@@ -56,19 +73,15 @@ Base Layout Styles
 Main Header
 **************/
 
-#main-header {
-   
+.main-header {
+   width: 100%;
+   position: fixed;
+   top: 0;
+   z-index: 100;
+   /*border: 2px solid #030;*/
+	
 }
 
-
-
-#logo {
-	margin:0;
-    width: 200px;
-	display: inline-block;
-   /*border: 2px solid #F30;*/
-
-}
 
 
 
@@ -76,118 +89,20 @@ Main Header
 Main Nav
 **************/
 
-#main-nav {
-
+.main-nav {
+background: #110202;
+height: 68px;
 
 /*border: 2px solid #FF0;*/
 }
 
 
-
-#main-nav ul {
-	display: none;	
-	margin: 0 auto;
-	/*border: 2px dashed #F00; */
-}
-
- 	
-#main-nav li {
-	
-	text-align: center;
-	line-height: 2.5;
-	font-size: 0.689em;
-	margin:5px auto;
-	/*border: 2px solid #3F3; */
-	
-	
-}
-
-
-/*#main-nav a.current,
-.footy a.current {
-	
-	border-bottom: 2px solid rgba(255,0,0, .7);
-	
-	
-}*/
-	
-
-#main-nav li a:link,
-#main-nav li a:visited {
-	 /*color: #000;
-	 padding: 5px 10px;
-	*/
-}
-
-
-
-
-
-
-
-
-#main-nav li a:hover {
-  color: rgb(255,255, 255);
-  background-color: rgba(000,000,000, .7);
-  border-bottom: none;
-  
-}
-
-
-#main-nav:hover ul {
-	display: block;
-}
-
-
-
-
-a#menu-button {
+.main-logo {
+	margin:0 0 0 -5px;
+    width: 200px;
 	display: inline-block;
-	width: 10px;
-	margin: -5px 2px 0 105px;
-	padding: 20px;
-	text-align: center;
-	background: #000;
-	background: url(menu_icon.png) center center no-repeat,
-	            linear-gradient( rgb(255,0,0), rgb(0,0,0));
-	
-	 
-}
+   /*border: 2px solid #F30;*/
 
-
-a#menu-button:hover {
-	background: #f00;
-	background: url(file:///C|/Users/Samantha/Documents/My%20Websites/Paul%20Grunert-raise%20the%20barre/Project/HTML/RTB/img/menu_icon.png) center center no-repeat,
-	            linear-gradient(#CCC, #000);
-}
-
-
-
-/******************
-Nav Social Media Bar
-*******************/
-
-
-
-
-.socialMedia {
-	width: 118px;
-	height: 35px;
-	padding: 10px;
-	margin-top: -27px;
-	/*border: 2px solid #F3C;*/
-}
-
-.socialMedia li {
-	width: 25px;
-	display: inline-block;
-	margin:-9px auto 0; 
-	
-}
-	
-
-.socialMedia li .mediaIcons {
-	margin: 0;
 }
 
 
@@ -197,13 +112,138 @@ Nav Social Media Bar
 /*******************************
      Layout Containers 
 *******************************/
+main {
+	margin: 65px 0 0 0;
+}
 
 
+main .inner-container {
+	width: 90%;
+	margin: 0 auto;
+	border: solid 1px #F30E12;
+}
 
 
+#home .inner-container {
+	text-align: center;
+}
+
+.inner-container h2 {
+	font-size: 2.5em;
+}
+
+#home-banner {
+	background: #ffecd2;
+	background: linear-gradient(#fff 0%, #fff 50%, #ffecd2 100%);	
+	padding: 1em 0;
+	/*margin: 63px 0 0 0;*/
+}
 
 
+.versatile-dancerText,
+#commercial-wrapper,
+#lyrical-wrapper {
+	padding: 2em 0;
+}
 
+
+.versatile-dancerText {
+	background: #ffecd2;
+	background: linear-gradient(#ffecd2, #fff);	
+	
+}
+
+
+#commercial-wrapper {
+	background: linear-gradient(#fff  70%, #fcb69f);
+	
+}
+
+#commercial-wrapper h3,
+#lyrical-wrapper h3{
+	font-size: 1.6em;
+}
+
+
+#lyrical-wrapper{
+	background: linear-gradient(to top, #fff  70%, #fcb69f);
+	
+}
+
+#class-details .top-image {
+	margin-bottom: 2em;
+}
+
+#class-details .bottom-image {
+	margin-top: 2em;
+}
+
+#class-details {
+	background: linear-gradient(#fff 30%, #ffecd2 45%,#fff 76%);	
+}
+
+#class-details h2 {
+	font-size: 1.5em;
+}
+
+#class-details p,
+address{
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	font-size: 1em;
+	text-shadow: 0 1px 1px #000;
+}
+
+#contact {
+	background: linear-gradient(#ffecd2, #fff, #ffecd2 );	
+	}
+#contact .inner-container {
+	width: 100%;
+}
+
+
+.class-deal + p{
+	
+	padding: 1em;
+	/*width: 80%;
+	margin: 0 auto;*/
+}
+
+.class-deal h2 {
+	font-size: 1.9em;
+	color: #f00;
+}
+
+
+a[href^="mailto:"],
+a[href^="tel:"]{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.1em;
+	color: #000;
+}
+
+a[href^="tel:"]{
+	font-size: 1.2em;
+}
+
+.main-footer p {
+	text-align: center;
+}
+
+.socialMedia-links {
+	width: 300px;
+	margin: 0 auto;
+	/*border: solid 1px blue;*/
+}
+
+.socialMedia-links li,
+.socialMedia-links a { 
+	display: inline-block;
+	width: 80px;
+	margin: 5px 6px;
+	
+	/*border: solid 1px blue;*/
+}
 
 
 
