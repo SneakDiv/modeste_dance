@@ -89,8 +89,10 @@ Main Header
 Main Nav
 **************/
 
-.main-nav {
+.main-nav,
+.main-footer{
 background: #110202;
+box-shadow: 0 5px 3px -4px #666666;
 height: 68px;
 
 /*border: 2px solid #FF0;*/
@@ -120,7 +122,7 @@ main {
 main .inner-container {
 	width: 90%;
 	margin: 0 auto;
-	border: solid 1px #F30E12;
+	/*border: solid 1px #F30E12;*/
 }
 
 
@@ -195,8 +197,11 @@ address{
 }
 
 #contact {
+	padding-bottom: 2em;
 	background: linear-gradient(#ffecd2, #fff, #ffecd2 );	
 	}
+
+
 #contact .inner-container {
 	width: 100%;
 }
@@ -226,26 +231,55 @@ a[href^="tel:"]{
 	font-size: 1.2em;
 }
 
-.main-footer p {
-	text-align: center;
+.main-footer {
+	height: 200px;
+	padding: 0.5em 0;
+	box-shadow: none;
+	border-top: 5px solid #f00;
+	
 }
 
+.main-footer p,
+.main-footer a {
+	text-align: center;
+	color: #ffecd2;
+}
+
+.main-footer p {
+	margin: 0.5em 0;
+	margin-bottom: 0;
+}
+
+
 .socialMedia-links {
-	width: 300px;
+	max-width: 300px;
+	min-width: 300px;
 	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
 	/*border: solid 1px blue;*/
 }
 
-.socialMedia-links li,
-.socialMedia-links a { 
-	display: inline-block;
-	width: 80px;
-	margin: 5px 6px;
+.socialMedia-links li{
+	float: left;
+	/*border: solid 1px green;*/
+}
+
+.socialMedia-links li a{
+	display: block;
+	width: 90px;
+	padding: 14px 16px;
+	/*border: solid 1px green;*/
+}
+
+
+.socialMedia-links img { 
+	display: inline;
+	margin-bottom: 0;
+	
 	
 	/*border: solid 1px blue;*/
 }
-
-
 
 /*******************************
     Page Elements
