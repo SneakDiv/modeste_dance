@@ -33,6 +33,7 @@ footer{
 p {
 	font-size: 0.95em;
 	margin-bottom: 1.8em;
+	padding: 1em;
 	color: #160606;
 	
 }
@@ -88,14 +89,41 @@ Main Header
 /*************
 Main Nav
 **************/
+.main-nav,
+.main-nav .flex-container{
+
+height: 68px;
+
+/*border: 2px solid #FF0;*/
+}
 
 
+
+
+
+#menu-nav {
+	display: none;
+}
+
+#menu-nav li {
+	margin: 0 20px;
+	padding: 5px 10px;
+	font-size: 1.6em;
+	text-align: center;
+	border: solid 2px #ffecd2;
+}
+
+
+#menu-nav li a {
+	color: #ffecd2;
+	text-shadow: 0 1px 1px #fff;
+}
 
 .main-nav,
 .main-footer{
 background: #110202;
 box-shadow: 0 5px 3px -4px #666666;
-height: 68px;
+
 
 /*border: 2px solid #FF0;*/
 }
@@ -114,7 +142,7 @@ height: 68px;
 #menuToggle {
 	display: block;
 	position: relative;
-	top: -100px;
+	top: -60px;
 	right: -245px;
 	z-index: 1;
 	user-select: none;
@@ -215,7 +243,16 @@ height: 68px;
  
 }
 
-#menu li {
+
+
+#menu li,
+#menu li a{
+	display: block;
+	
+}
+
+
+#menu li{
 	display: block;
 	margin: 10px 0;
 	padding: 10px 10px 10px 20px;
@@ -226,13 +263,17 @@ height: 68px;
 
 
 #menu li a {
+	width: 150px;
+	margin: 0 0;
+	padding: 0 10px 10px 20px;
 	color: #ffecd2;
 	text-shadow: 0 1px 1px #fff;
+	border: none;
 }
 
 #menuToggle input[type=checkbox]:checked ~ #menu{
   transform: none;
-	margin: 20px 0 0 -53px;
+	margin: 17px 0 0 -53px;
 }
 
 
@@ -244,6 +285,7 @@ height: 68px;
 main {
 	margin: 65px 0 0 0;
 }
+
 
 
 main .inner-container {
@@ -290,7 +332,7 @@ main .inner-container {
 
 #commercial-wrapper h3,
 #lyrical-wrapper h3{
-	font-size: 1.6em;
+	font-size: 1.6rem;
 }
 
 
@@ -333,13 +375,15 @@ address{
 	width: 100%;
 }
 
-
-.class-deal + p{
+.divide-mobile {
+   height:5px;
+   border-style: none;
+   background:#f00;
+   box-shadow: 0 1px 1px 1px #666666;
 	
-	padding: 1em;
-	/*width: 80%;
-	margin: 0 auto;*/
 }
+
+
 
 .class-deal h2 {
 	font-size: 1.9em;
@@ -350,8 +394,13 @@ address{
 a[href^="mailto:"],
 a[href^="tel:"]{
 	font-family: 'Montserrat', sans-serif;
-	font-size: 1.1em;
+	font-size: 0.950em;
 	color: #000;
+}
+
+
+#contact h3 ~ p {
+	padding:0;
 }
 
 a[href^="tel:"]{
@@ -359,7 +408,7 @@ a[href^="tel:"]{
 }
 
 .main-footer {
-	height: 200px;
+	height: 330px;
 	padding: 0.5em 0;
 	box-shadow: none;
 	border-top: 5px solid #f00;
@@ -370,6 +419,12 @@ a[href^="tel:"]{
 .main-footer a {
 	text-align: center;
 	color: #ffecd2;
+}
+
+
+
+.social-media {
+	visibility: hidden;
 }
 
 .main-footer p {
@@ -408,6 +463,20 @@ a[href^="tel:"]{
 	/*border: solid 1px blue;*/
 }
 
+.socialMedia-links li a:hover {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	-webkit-transition: all.3s;
+	-moz-transition: all.3s;
+	-o-transition: all.3s;
+	-ms-transition: all.3s;
+	transition: all.3s;
+	cursor: pointer;
+	overflow: hidden;
+}
 /*******************************
     Page Elements
 *******************************/
@@ -445,13 +514,265 @@ a[href^="tel:"]{
 MEDIA QUERIES
 ********************************************************************/
 
-@media (min-width: 480px), (min-width: 500px) and (orientation: landscape) {
+@media (min-width: 370px) {
+	
+	#menuToggle input {
+	right: 250px;
+	/*opacity: 5;*/
+	
+}
+
+
+
+#menuToggle span {
+	
+	margin-left: 62px;
+}
+	
+	
+	
+		
+	
+}
+
+
+
+@media (min-width: 415px) {
+	
+	#menuToggle input {
+	right: 211px;
+	/*opacity: 5;*/
+}
+	
+	
+	#menuToggle span {
+	
+	margin-left: 101px;
+}
+	
+	.new-lineEmail {
+		display: none;
+	}
+	
+	
+	h2 {
+		font-size: 2em;
+	}
+	
+	
+	h3 {
+		font-size:1.5em;
+	}
+	
+	
+a[href^="mailto:"],
+a[href^="tel:"]{
+  
+	font-size: 1.1em;
+	
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+@media (min-width: 500px){
+	#menuToggle input {
+	right: 124px;
+	/*opacity: 5;*/
+}
+	
+	
+	#menuToggle span {
+	
+	margin-left: 189px;
+}
+	
+	
+	
+	#menu {
+  
+  width: 394px;
+  margin: 0 0 0 98px;
+   padding: 10px 50px 5px 10px;
+ 
+}
+	
+	
+}
+
+
+
+@media (min-width: 568px) {
+	
+	#menuToggle input {
+	right: 62px;
+	/*opacity: 5;*/
+}
+	
+	
+	#menuToggle span {
+	
+	margin-left: 251px;
+}
+	
+	
+	
+	#menu {
+  
+  width: 404px;
+  margin: 0 0 0 107px;
+   padding: 10px 50px 5px 10px;
+ 
+}
+	
+	#menu li {
+		text-align: center;
+	}
+	
+	
+}
+
+
+@media (min-width: 600px) {
+	
+	#menuToggle input {
+	right: 13px;
+	/*opacity: 5;*/
+}
+	
+	
+	#menuToggle span {
+	
+	margin-left: 300px;
+}
+	
+	
+	
+	#menu {
+  
+  width: 450px;
+  margin: 0 0 0 126px;
+   padding: 10px 50px 5px 10px;
+ 
+}
+	
+	#menu li {
+		text-align: center;
+	}
+	
+	
+	p,
+    address{
+	  font-size: 1.4em;	
+	}
+	
+	
+	#commercial-wrapper h3,
+#lyrical-wrapper h3{
+	font-size: 1.8rem;
+}
+	
+	.back-to-top {
+		font-size: 1.3rem;
+	}	
+	
+	.main-footer {
+		height: 382px;
+	}
+	
+}
+
+
+@media (min-width: 640px), (min-width: 700px) and (min-width:760px) and (orientation: landscape) {
+	
+	
+	
+	#menuToggle,
+	#menuToggle input,
+	#menuToggle span,
+	#menu{
+	display: none;
+	
+}
+	
+	/*
+	#menu-nav {
+		display: block;
+		width: 250px;
+		color: #fff;
+	}*/
+	
+	
+	
+	
+	.main-nav .flex-container,
+	#menu-nav {
+		display: flex;
+		justify-content: space-between;
+		/*border: 2px solid green;*/
+	}
+	
+	
+	#menu-nav {
+		flex-direction: row;
+		 align-items: center;
+		
+	}
 	
 	
 }
 
 
 @media (min-width: 768px), (min-width: 1024px) and (orientation: landscape) {
+	.main-logo {
+		width: 300px;
+	}
+	
+	
+	
+	.main-nav {
+		height: 101px;
+	}
+	
+	.inner-container h2 {
+		font-size: 3em;
+	}
+	
+	#dance-styles .flex-container {
+		display: flex;
+		
+		/*border: 2px solid green;*/
+	}
+	
+	
+	.top-image,
+	.bottom-image{
+		max-width: 50%;
+		margin-right: 335px;
+	}
+	
+	#class-details h2 {
+		font-size: 3em;
+	}
+	
+	
+	#class-details p,
+	#class-details address{
+		font-size: 2em;
+	}
+	
+	
+	.bottom-image{
+		margin-left: 370px;
+	}
 	
 	
 }
