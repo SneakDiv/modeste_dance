@@ -43,18 +43,48 @@ a {
 Base Layout Styles
 ********************************************************************/
 
+.main-header,
+#contact .inner-container {
+	width: 100%;
+}
+
+
+#menuToggle,
+#menuToggle input,
+#menuToggle span,
+#menu a,
+.socialMedia-links a {
+	display: block;
+}
+
+
+
+#home .inner-container,
+.main-footer p,
+.main-footer a {
+	text-align: center;
+}
+
+
+
+.main-nav .inner-container {
+	display: flex;
+}
+
+
 
 /*************
 Main Header
 **************/
 
 .main-header {
-	width: 100%;
 	position: fixed;
 	top: 0;
 	z-index: 100;
 	/*border: 2px solid #030;*/
 }
+
+
 /*************
 Main Nav
 **************/
@@ -105,7 +135,7 @@ Main Nav
 
 
 #menuToggle {
-	display: block;
+	
 	position: relative;
 	top: -60px;
 	right: -245px;
@@ -117,7 +147,7 @@ Main Nav
 
 
 #menuToggle input {
-	display: block;
+	
 	width: 50px;
 	height: 40px;
 	position: absolute;
@@ -130,7 +160,7 @@ Main Nav
 
 
 #menuToggle span {
-	display: block;
+	
 	width: 47px;
 	height: 4px;
 	margin-top: 10px;
@@ -175,7 +205,7 @@ Main Nav
 }
 
 
-#menu {
+#menu-mobile {
 	position: absolute;
 	width: 300px;
 	margin: 0 0 0 61px;
@@ -191,22 +221,19 @@ Main Nav
 }
 
 
-#menu li, #menu li a {
-	display: block;
-}
 
 
-#menu li {
-	display: block;
+#menu-mobile li {
+	
 	margin: 10px 0;
-	padding: 10px 10px 10px 20px;
+	padding: 10px 10px 10px 10px;
 	font-size: 1.3em;
 	text-align: left;
 	border: solid 2px black;
 }
 
 
-#menu li a {
+#menu-mobile li a {
 	width: 150px;
 	margin: 0 0;
 	padding: 0 10px 10px 20px;
@@ -216,10 +243,14 @@ Main Nav
 }
 
 
-#menuToggle input[type=checkbox]:checked~#menu {
+#menuToggle input[type=checkbox]:checked~#menu-mobile {
 	transform: none;
-	margin: 17px 0 0 -53px;
+	margin: 17px 0 0 -58px;
 }
+
+
+
+
 /*******************************
      Layout Containers 
 *******************************/
@@ -231,17 +262,17 @@ main {
 
 main .inner-container {
 	width: 99%;
+	padding: 1em 0;
 	margin: 0 auto;
 	/*border: solid 1px #F30E12;*/
 }
 
 
-#home .inner-container {
-	text-align: center;
-}
 
 
-.inner-container h2 {
+
+.inner-container h2,
+.banner-inner-text h2 {
 	font-size: 2.5em;
 }
 
@@ -251,6 +282,12 @@ main .inner-container {
 	background: linear-gradient(#fff 0%, #fff 50%, #ffecd2 100%);
 	padding: 1em 0;
 	/*margin: 63px 0 0 0;*/
+}
+
+
+
+#home-banner img {
+	margin-top: 1em;
 }
 
 
@@ -316,9 +353,6 @@ main .inner-container {
 }
 
 
-#contact .inner-container {
-	width: 100%;
-}
 
 
 .divide-mobile {
@@ -353,22 +387,36 @@ a[href^="tel:"] {
 }
 
 
+.main-footer .inner-container,
+.social-media,
+.socialMedia-links {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+.socialMedia-links {
+	flex-direction: row;
+	justify-content: space-around;
+}
+
 .main-footer {
-	height: 330px;
 	padding: 0.5em 0;
 	box-shadow: none;
 	border-top: 5px solid #f00;
 }
 
 
-.main-footer p, .main-footer a {
-	text-align: center;
+.main-footer p,
+.main-footer a {
+	
 	color: #ffecd2;
 }
 
 
 .social-media {
-	visibility: hidden;
+	/*visibility: hidden;*/
 }
 
 
@@ -389,13 +437,13 @@ a[href^="tel:"] {
 
 
 .socialMedia-links li {
-	float: left;
+	/*float: left;*/
 	/*border: solid 1px green;*/
 }
 
 
 .socialMedia-links li a {
-	display: block;
+	
 	width: 90px;
 	padding: 14px 16px;
 	/*border: solid 1px green;*/
@@ -403,7 +451,7 @@ a[href^="tel:"] {
 
 
 .socialMedia-links img {
-	display: inline;
+	/*display: inline;*/
 	margin-bottom: 0;
 	/*border: solid 1px blue;*/
 }
@@ -440,40 +488,60 @@ MEDIA QUERIES
 		right: 250px;
 		/*opacity: 5;*/
 	}
+	
 	#menuToggle span {
 		margin-left: 62px;
 	}
+	
+	
 }
 @media (min-width: 415px) {
 	#menuToggle input {
 		right: 211px;
 		/*opacity: 5;*/
 	}
+	
 	#menuToggle span {
 		margin-left: 101px;
 	}
+	
 	.new-lineEmail {
 		display: none;
 	}
+	
+	
 	h2 {
 		font-size: 2em;
 	}
+	
+	
 	h3 {
 		font-size: 1.5em;
 	}
-	a[href^="mailto:"], a[href^="tel:"] {
+	
+	
+	a[href^="mailto:"],
+	a[href^="tel:"] {
 		font-size: 1.1em;
 	}
+	
+	
 }
+
+
 @media (min-width: 500px) {
 	#menuToggle input {
 		right: 124px;
 		/*opacity: 5;*/
 	}
+	
+	
 	#menuToggle span {
 		margin-left: 189px;
 	}
-	#menu {
+	
+	
+	#menu-mobile {
 		width: 394px;
 		margin: 0 0 0 98px;
 		padding: 10px 50px 5px 10px;
@@ -484,49 +552,91 @@ MEDIA QUERIES
 		right: 62px;
 		/*opacity: 5;*/
 	}
+	
+	
 	#menuToggle span {
 		margin-left: 251px;
 	}
-	#menu {
+	
+	
+	#menu-mobile {
 		width: 404px;
 		margin: 0 0 0 107px;
 		padding: 10px 50px 5px 10px;
 	}
-	#menu li {
+	
+	
+	#menu-mobile li {
 		text-align: center;
 	}
+	
+	
 }
+
+
+
 @media (min-width: 600px) {
 	#menuToggle input {
 		right: 13px;
 		/*opacity: 5;*/
 	}
+	
+	
 	#menuToggle span {
 		margin-left: 300px;
 	}
-	#menu {
+	
+	
+	#menu-mobile {
 		width: 450px;
 		margin: 0 0 0 126px;
 		padding: 10px 50px 5px 10px;
 	}
-	#menu li {
+	
+	
+	#menu-mobile li {
 		text-align: center;
 	}
+	
+	
 	p, address {
 		font-size: 1.4em;
 	}
-	#commercial-wrapper h3, #lyrical-wrapper h3 {
+	
+	
+	#commercial-wrapper h3,
+	#lyrical-wrapper h3 {
 		font-size: 1.8rem;
 	}
+	
+	
 	.back-to-top {
 		font-size: 1.3rem;
 	}
-	.main-footer {
-		height: 382px;
-	}
+	
+	
+	
+	.main-footer .inner-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: flex-start;
 }
+
+	
+	
+	
+	
+	
+}
+
+
+
 @media (min-width: 640px), (min-width: 700px) and (min-width:760px) and (orientation: landscape) {
-	#menuToggle, #menuToggle input, #menuToggle span, #menu {
+	#menuToggle,
+	#menuToggle input,
+	#menuToggle span,
+	#menu-mobile {
 		display: none;
 	}
 	/*
@@ -535,42 +645,86 @@ MEDIA QUERIES
 		width: 250px;
 		color: #fff;
 	}*/
-	.main-nav .flex-container, #menu-nav {
+	.main-nav .inner-container,
+	#menu-nav {
 		display: flex;
 		justify-content: space-between;
 		/*border: 2px solid green;*/
 	}
+	
+	
 	#menu-nav {
 		flex-direction: row;
 		align-items: center;
 	}
+	
+	
+	
+	
+	
+	
+	#home-banner .inner-container {
+		display: flex;
+		border: 1px solid blue;
+		
 }
+	
+	
+
+	
+
+}
+
 @media (min-width: 768px), (min-width: 1024px) and (orientation: landscape) {
+	
+	
 	.main-logo {
 		width: 300px;
 	}
+	
+	
 	.main-nav {
 		height: 101px;
 	}
+	
+	
 	.inner-container h2 {
 		font-size: 3em;
 	}
+	
+	
 	#dance-styles .flex-container {
 		display: flex;
 		/*border: 2px solid green;*/
 	}
+	
+	
 	.top-image, .bottom-image {
 		max-width: 50%;
 		margin-right: 335px;
 	}
+	
+	
 	#class-details h2 {
 		font-size: 3em;
 	}
+	
+	
 	#class-details p, #class-details address {
 		font-size: 2em;
 	}
+	
+	
 	.bottom-image {
 		margin-left: 370px;
 	}
+	
+	
 }
-@media (min-width: 1140px) {}
+@media (min-width: 1140px) {
+	
+	.main-nav .inner-container{
+		max-width: 1500px;
+		margin: 0 auto;
+	}
+}
