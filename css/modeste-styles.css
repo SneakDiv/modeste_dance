@@ -328,10 +328,11 @@ main .inner-container {
 	margin-top: 2em;
 }
 
-
-#class-details {
-	background: linear-gradient(#fff 30%, #ffecd2 45%, #fff 76%);
+.inner-containerText {
+		background: linear-gradient(#fff -20%, #ffecd2 52%, #fff 100%);
 }
+	
+
 
 
 #class-details h2 {
@@ -339,9 +340,11 @@ main .inner-container {
 }
 
 
-#class-details p, address {
+#class-details p,
+address {
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
+	padding: 0;
 	font-size: 1em;
 	text-shadow: 0 1px 1px #000;
 }
@@ -393,6 +396,10 @@ a[href^="tel:"] {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.social-media {
+	display: none;
 }
 
 
@@ -485,12 +492,12 @@ MEDIA QUERIES
 
 @media (min-width: 370px) {
 	#menuToggle input {
-		right: 250px;
+		right: 240px;
 		/*opacity: 5;*/
 	}
 	
 	#menuToggle span {
-		margin-left: 62px;
+		margin-left: 52px;
 	}
 	
 	
@@ -616,13 +623,6 @@ MEDIA QUERIES
 	
 	
 	
-	.main-footer .inner-container {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: flex-start;
-}
-
 	
 	
 	
@@ -639,12 +639,7 @@ MEDIA QUERIES
 	#menu-mobile {
 		display: none;
 	}
-	/*
-	#menu-nav {
-		display: block;
-		width: 250px;
-		color: #fff;
-	}*/
+	
 	.main-nav .inner-container,
 	#menu-nav {
 		display: flex;
@@ -653,30 +648,86 @@ MEDIA QUERIES
 	}
 	
 	
+	
+	
 	#menu-nav {
 		flex-direction: row;
 		align-items: center;
 	}
 	
 	
+	#home-banner img,
+	#class-details img{
+		display: block;
+		
+	}
+	
+	#home-banner {
+		
+		background: linear-gradient(#fff 0%, #fff 87%, #ffecd2 100%);
+	}
 	
 	
+	#home-banner img ,
+	.versatile-dancerText .inner-container,
+	.dance-style-text {
+		width: 300px;
+	}
+
+	
+	#home-banner,
+	.versatile-dancerText .inner-container,
+	.dance-style-text{
+		margin: 0 auto;
+	}
 	
 	
-	#home-banner .inner-container {
+	#home-banner .inner-container,
+	#class-details .inner-container {
 		display: flex;
-		border: 1px solid blue;
+		justify-content: center;
+		align-items: flex-start;
+		/*border: 1px solid blue;*/
 		
 }
 	
+	#class-details  {
+		background: #fff;
+		margin-top: -8px;
+	}
 	
-
 	
+	#class-details p {
+		padding: 0;
+	}
+	
+	
+	
+	.top-image,
+	.bottom-image {
+		width: 150px;
+	}
+	
+	
+	
+	
+	.inner-containerText {
+		align-self: center;
+		background: linear-gradient(#fff 0%, #ffecd2 72%, #fff 100%);
+}
+	
+	
+	.bottom-image {
+		align-self: flex-end;
+	}
 
 }
 
 @media (min-width: 768px), (min-width: 1024px) and (orientation: landscape) {
 	
+	main {
+		margin: 115px 0 0 0;
+	}
 	
 	.main-logo {
 		width: 300px;
@@ -692,32 +743,89 @@ MEDIA QUERIES
 		font-size: 3em;
 	}
 	
+	#home-banner img {
+		width: 400px;
+	}
 	
-	#dance-styles .flex-container {
+	
+	.versatile-dancerText .inner-container{
+		height: 200px;
+		width: 600px;
+		/*border: 1px solid #47097C;*/
+	}
+	
+	
+	
+	.versatile-dancerText p {
+		margin-bottom: 1em;
+		padding: 0;
+	}
+	
+	
+	
+	
+	#dance-styles .inner-container {
 		display: flex;
+		justify-content: center;
+		min-width: 80%;
+		margin: 0 auto;
+		padding:0;
 		/*border: 2px solid green;*/
 	}
 	
 	
-	.top-image, .bottom-image {
-		max-width: 50%;
-		margin-right: 335px;
+	#commercial img,
+	#lyrical img{
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+		/*border: solid 1px #25B914;*/
 	}
 	
+	
+	 #commercial-wrapper,
+	#lyrical-wrapper{
+		width: 50%;
+		/*border: 1px solid #261751;*/
+	}
+	
+	
+	
+	.inner-containerText {
+		align-self: center;
+		background: linear-gradient(#fff -16%, #ffecd2 56%, #fff 139%);
+}
+	
+	
+	#class-details .inner-container{
+		height: 780px;
+	}
 	
 	#class-details h2 {
-		font-size: 3em;
-	}
-	
-	
-	#class-details p, #class-details address {
 		font-size: 2em;
 	}
 	
 	
-	.bottom-image {
-		margin-left: 370px;
+	#class-details p,
+	#class-details address {
+		font-size: 1.5em;
 	}
+	
+	
+	.top-image,
+	.bottom-image {
+		width: 250px;
+	}
+	
+	
+	
+	.main-footer .inner-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
 	
 	
 }
@@ -726,5 +834,10 @@ MEDIA QUERIES
 	.main-nav .inner-container{
 		max-width: 1500px;
 		margin: 0 auto;
+	}
+	
+	
+	#home-banner img {
+		width: 500px;
 	}
 }
