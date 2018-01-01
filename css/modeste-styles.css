@@ -21,6 +21,13 @@ footer {
 	text-shadow: 0 1px 2px #000;
 }
 
+
+.name {
+	font-family: 'Cinzel Decorative', cursive;
+	/*font-family: 'Spirax', cursive;*/
+	/*font-family: 'Glass Antiqua', cursive;*/
+}
+
 p {
 	font-size: 0.95em;
 	margin-bottom: 1.8em;
@@ -39,6 +46,25 @@ img {
 a {
 	text-decoration: none;
 }
+
+
+
+
+a:visited {
+	color: #2f0707;
+}
+
+
+a:hover,
+.back-to-top:hover,
+.main-footer .go-to:hover,
+.main-footer a:hover{
+	transform: scale(1.1);
+	transition: all.5s;
+	cursor: pointer;
+}
+
+
 /*******************************************************************
 Base Layout Styles
 ********************************************************************/
@@ -102,20 +128,39 @@ Main Nav
 }
 
 
-#menu-nav li {
+#menu-nav a {
 	margin: 0 20px;
 	padding: 5px 10px;
+	border-radius: 5px;
 	font-size: 1.6em;
 	text-align: center;
 	border: solid 2px #ffecd2;
-}
-
-
-#menu-nav li a {
 	color: #ffecd2;
 	text-shadow: 0 1px 1px #fff;
 }
 
+
+
+
+
+#menu-nav  .current {
+	padding: 8px 10px;
+	background: #ffecd2;
+	background: linear-gradient(#ffecd2,#fcb69f);
+	border: solid 2px #ED670D;
+	color: #110202;
+	text-shadow: 0 1px 1px #110202;
+	
+}
+
+
+
+#menu-nav li:hover {
+	transform: scale(1.1);
+	transition: all.5s;
+	cursor: pointer;
+
+}
 
 
 .main-nav,
@@ -233,6 +278,26 @@ Main Nav
 }
 
 
+
+#menu-mobile li .current{
+	
+	margin: 10px 0;
+	padding: 10px 10px 10px 10px;
+	font-size: 1.3em;
+	text-align: left;
+	border: solid 2px black;
+	background: rgb(255,236,210);
+	background: linear-gradient(rgb(255,236,210), rgb(252,182,159));
+	color: #110202;
+	text-shadow: 0 1px 1px #110202;
+	
+}
+
+
+
+
+
+
 #menu-mobile li a {
 	width: 150px;
 	margin: 0 0;
@@ -291,6 +356,10 @@ main .inner-container {
 }
 
 
+#home-banner p {
+	margin-top: -1em;
+	font-weight: 700;
+}
 .versatile-dancerText,
 #commercial-wrapper,
 #lyrical-wrapper {
@@ -305,16 +374,21 @@ main .inner-container {
 
 
 #commercial-wrapper {
+	border-radius: 0 0 0 30%;
+	border-bottom: 2px solid #f00;
 	background: linear-gradient(#fff 70%, #fcb69f);
 }
 
 
-#commercial-wrapper h3, #lyrical-wrapper h3 {
-	font-size: 1.6rem;
+#commercial-wrapper h3,
+#lyrical-wrapper h3 {
+	font-size: 1.1rem;
 }
 
 
 #lyrical-wrapper {
+	border-radius: 30% 0 0 0;
+	border-top: 2px solid #f00;
 	background: linear-gradient(to top, #fff 70%, #fcb69f);
 }
 
@@ -330,6 +404,9 @@ main .inner-container {
 
 .inner-containerText {
 		background: linear-gradient(#fff -20%, #ffecd2 52%, #fff 100%);
+	border-radius: 20% 0 20% 0;
+	border-top: 2px solid #f00;
+	border-bottom: 2px solid #f00;
 }
 	
 
@@ -422,6 +499,14 @@ a[href^="tel:"] {
 }
 
 
+.main-footer p:hover
+.main-footer p a:hover{
+	transform: scale(1.1);
+	transition: all.5s;
+	cursor: pointer;
+}
+
+
 .social-media {
 	/*visibility: hidden;*/
 }
@@ -482,7 +567,6 @@ a[href^="tel:"] {
     Page Elements
 *******************************/
 
-/***GENERAL ACROSS ALL PAGES***/
 
 /***GENERAL ACROSS ALL PAGES ENDS***/
 
@@ -553,6 +637,14 @@ MEDIA QUERIES
 		margin: 0 0 0 98px;
 		padding: 10px 50px 5px 10px;
 	}
+	
+	
+	#commercial-wrapper h3,
+    #lyrical-wrapper h3 {
+	font-size: 1.3rem;
+}
+	
+	
 }
 @media (min-width: 568px) {
 	#menuToggle input {
@@ -653,6 +745,7 @@ MEDIA QUERIES
 	#menu-nav {
 		flex-direction: row;
 		align-items: center;
+		margin-top: 2px;
 	}
 	
 	
@@ -713,6 +806,7 @@ MEDIA QUERIES
 	
 	.inner-containerText {
 		align-self: center;
+		padding: 1em;
 		background: linear-gradient(#fff 0%, #ffecd2 72%, #fff 100%);
 }
 	
@@ -739,14 +833,26 @@ MEDIA QUERIES
 	}
 	
 	
+	
+	#menu-nav {
+		
+		margin-top: 25px;
+	}
+	
 	.inner-container h2 {
 		font-size: 3em;
 	}
+	
+	
 	
 	#home-banner img {
 		width: 400px;
 	}
 	
+	
+	#home-banner .name {
+		font-size: 3.5em;
+	}
 	
 	.versatile-dancerText .inner-container{
 		height: 200px;
@@ -790,11 +896,31 @@ MEDIA QUERIES
 	}
 	
 	
+
+	
+	#lyrical-wrapper {
+		border-radius: 40% 0 0 0;
+		border-top: 3px solid #f00;
+		background: linear-gradient(to top, #fff 50%, #fcb69f);
+	}
+	
+	
+	#commercial-wrapper {
+		background: linear-gradient(#fff 50%, #fcb69f);
+		border-radius: 0 0 0 40%;
+		border-bottom: 3px solid #f00;
+	}
 	
 	.inner-containerText {
 		align-self: center;
 		background: linear-gradient(#fff -16%, #ffecd2 56%, #fff 139%);
 }
+	
+	
+	#commercial-wrapper h3,
+	#lyrical-wrapper h3 {
+		font-size: 2rem;
+	}
 	
 	
 	#class-details .inner-container{
@@ -838,6 +964,27 @@ MEDIA QUERIES
 	
 	
 	#home-banner img {
-		width: 500px;
+		width: 688px;
+		
+	}
+	
+	
+	#home-banner .name {
+		font-size: 4.5em;
+	}
+	
+	#home-banner p {
+		font-size: 2em;
+	}
+	
+	#commercial-wrapper h3,
+	#lyrical-wrapper h3 {
+		font-size: 2.5rem;
+	}
+	
+	
+	#commercial-wrapper p,
+	#lyrical-wrapper p {
+		font-size: 1.9rem;
 	}
 }
