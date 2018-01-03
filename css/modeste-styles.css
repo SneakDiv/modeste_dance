@@ -14,17 +14,25 @@ h1,
 h2,
 h3,
 a,
+.name,
 footer {
 	margin: 0;
 	font-family: 'Poiret One', cursive, sans-serif;
 	color: #2f0707;
-	text-shadow: 0 1px 2px #000;
+	text-shadow: 0 1px 2px #f00;
 }
 
 
 .name {
 	font-family: 'Cinzel Decorative', cursive;
 	color: #312F2F;
+	
+}
+
+.name-drop {
+	color: #312F2F;
+	font-weight: 700;
+	text-shadow: 0 1px 1px #000;
 }
 
 p {
@@ -420,10 +428,11 @@ main .inner-container {
 }
 
 
-.top_left-wrap p,
-.bottom_right-wrap p {
-	
-	padding: 1em 1em 1em 2em;
+#samPerformer-wrapper p,
+#samTeacher-wrapper p {
+    margin-bottom: 20px;
+	padding: 1em 1em 1em 3em;
+	text-align: left;
 }
 
 
@@ -497,16 +506,30 @@ address {
 	background: linear-gradient(#ffecd2, #fff, #ffecd2);
 }
 
-
+#contact h2,
+#contact h3,
+#contact a {
+	text-shadow: 0 1px 2px #000;
+}
 
 
 .divide {
-	height: 5px;
+	height: 2px;
+	margin-top: 0;
 	border-style: none;
 	background: #f00;
 	box-shadow: 0 1px 1px 1px #666666;
 }
 
+
+
+.divide-brown {
+	height: 3px;
+	margin-top: 0;
+	border-style: none;
+	background: #e5d4bd;
+	box-shadow: 0 1px 1px 1px #666666;
+}
 
 #about-danceClass .divide {
 	margin-top: -5px;
@@ -566,6 +589,7 @@ a[href^="tel:"] {
 .main-footer a {
 	
 	color: #ffecd2;
+	text-shadow: 0 0 0 #000;
 }
 
 
@@ -683,7 +707,7 @@ MEDIA QUERIES
 	
 	a[href^="mailto:"],
 	a[href^="tel:"] {
-		font-size: 1.1em;
+		font-size: 1.1rem;
 	}
 	
 	
@@ -774,6 +798,13 @@ MEDIA QUERIES
 	}
 	
 	
+	#samPerformer-wrapper .top_left-wrap p,
+	#samTeacher-wrapper .bottom_right-wrap p {
+		font-size: 1.3rem;
+		padding: 1em 1em 1em 4em;
+	}
+	
+	
 	#commercial-wrapper h3,
 	#lyrical-wrapper h3,
 	.top_left-wrap h3,
@@ -787,10 +818,7 @@ MEDIA QUERIES
 		width: 500px;
 	}
 	
-	#about-sam p {
-		text-align: left;
-		padding: 1em 2em 1em 2em;
-	}
+	
 	
 	.back-to-top {
 		font-size: 1.3rem;
@@ -876,11 +904,17 @@ MEDIA QUERIES
 	
 	#home-banner img ,
 	.versatile-dancerText .inner-container,
-	.dance-style-text,
-	#about-danceClass img{
+	.dance-style-text{
 		width: 300px;
 	}
 
+	
+	
+	#about-danceClass img {
+		width: 350px;
+	}
+	
+	
 	
 	#home-banner,
 	.versatile-dancerText .inner-container,
@@ -910,7 +944,7 @@ MEDIA QUERIES
 	
 	#about-danceClass .top-image,
 	#about-danceClass .bottom-image {
-		width: 100px;
+		max-width: 100px;
 	}
 	
 	
@@ -919,7 +953,9 @@ MEDIA QUERIES
 		padding: 1em;
 		background: linear-gradient(#fff 0%, #ffecd2 72%, #fff 100%);
 }
-	
+	#about-danceClass .inner-containerText {
+		max-width: 450px;
+	}
 	
 	.bottom-image {
 		align-self: flex-end;
@@ -968,8 +1004,14 @@ MEDIA QUERIES
 	#about-banner img {
 		display: block;
 		width: 300px;
+		margin-top: 30px;
 	}
 	
+	
+	.video-player {
+		width: 450px;
+		margin: 0 auto;
+	}
 	
 	
 	.versatile-dancerText .inner-container{
@@ -988,23 +1030,43 @@ MEDIA QUERIES
 	
 	
 	
-	#dance-styles .inner-container {
+	#dance-styles .inner-container,
+	#about-sam .inner-container{
 		display: flex;
 		justify-content: center;
 		min-width: 80%;
 		margin: 0 auto;
-		padding:0;
+		/*padding:0;*/
 		/*border: 2px solid green;*/
 	}
 	
 	
+	
+	
+	.top_left-wrap {
+	
+	border-bottom: 3px solid #f00;
+	
+}
+
+
+.bottom_right-wrap {
+	
+	border-top: 3px solid #f00;
+	
+}
+
+	
 	#commercial img,
-	#lyrical img{
+	#lyrical img,
+	#about-sam img{
 		display: block;
-		max-width: 100%;
+		max-width: 400px;
 		margin: 0 auto;
 		/*border: solid 1px #25B914;*/
 	}
+	
+	
 	
 	
 	 #commercial-wrapper,
@@ -1038,6 +1100,30 @@ MEDIA QUERIES
 	#commercial-wrapper h3,
 	#lyrical-wrapper h3 {
 		font-size: 2rem;
+	}
+	
+	
+	
+	
+	#about-danceClass .top-image,
+	#about-danceClass .bottom-image {
+		max-width: 150px;
+	}
+	
+	
+	#about-danceClass .top-image {
+		margin-right: 50px;
+	}
+	
+	
+	#about-danceClass .bottom-image {
+		margin-left: 50px;
+	}
+	
+	
+	
+	#about-danceClass .inner-containerText {
+		max-width: 750px;
 	}
 	
 	
@@ -1104,5 +1190,14 @@ MEDIA QUERIES
 	#commercial-wrapper p,
 	#lyrical-wrapper p {
 		font-size: 1.9rem;
+	}
+	
+	.video-player {
+		width: 550px;
+	}
+	
+	#about-danceClass .top-image,
+	#about-danceClass .bottom-image {
+		max-width: 250px;
 	}
 }
