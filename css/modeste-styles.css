@@ -24,8 +24,7 @@ footer {
 
 .name {
 	font-family: 'Cinzel Decorative', cursive;
-	/*font-family: 'Spirax', cursive;*/
-	/*font-family: 'Glass Antiqua', cursive;*/
+	color: #312F2F;
 }
 
 p {
@@ -86,6 +85,7 @@ Base Layout Styles
 
 
 #home .inner-container,
+#about-main .inner-container,
 .main-footer p,
 .main-footer a {
 	text-align: center;
@@ -341,8 +341,13 @@ main .inner-container {
 	font-size: 2.5em;
 }
 
+#about-danceClass .inner-container h2 {
+	font-size: 2em;
+}
 
-#home-banner {
+
+#home-banner,
+#about-banner{
 	background: #ffecd2;
 	background: linear-gradient(#fff 0%, #fff 50%, #ffecd2 100%);
 	padding: 1em 0;
@@ -350,21 +355,43 @@ main .inner-container {
 }
 
 
+#about-banner{
+	
+	background: linear-gradient(#fff 0%, #fff 36%, #ffecd2 100%);
+	
+	/*margin: 63px 0 0 0;*/
+}
 
-#home-banner img {
+
+
+
+
+
+#home-banner img,
+#about-banner img{
 	margin-top: 1em;
 }
 
 
-#home-banner p {
+#home-banner p ,
+#about-banner p{
 	margin-top: -1em;
 	font-weight: 700;
 }
+
+
+#about-banner p {
+	font-size: 1.1em;
+}
+
+
+
 .versatile-dancerText,
-#commercial-wrapper,
-#lyrical-wrapper {
+.top_left-wrap,
+.bottom_right-wrap {
 	padding: 2em 0;
 }
+
 
 
 .versatile-dancerText {
@@ -373,24 +400,61 @@ main .inner-container {
 }
 
 
-#commercial-wrapper {
+.top_left-wrap {
 	border-radius: 0 0 0 30%;
 	border-bottom: 2px solid #f00;
 	background: linear-gradient(#fff 70%, #fcb69f);
 }
 
 
-#commercial-wrapper h3,
-#lyrical-wrapper h3 {
-	font-size: 1.1rem;
-}
-
-
-#lyrical-wrapper {
+.bottom_right-wrap {
 	border-radius: 30% 0 0 0;
 	border-top: 2px solid #f00;
 	background: linear-gradient(to top, #fff 70%, #fcb69f);
 }
+
+ .top_left-wrap h3,
+.bottom_right-wrap h3{
+	font-size: 1.3rem;
+	
+}
+
+
+.top_left-wrap p,
+.bottom_right-wrap p {
+	
+	padding: 1em 1em 1em 2em;
+}
+
+
+#lyrical-wrapper h3 {
+	font-size: 1.2rem;
+	text-align: right;
+}
+
+
+
+
+.devil-details {
+	font-size: 0.750em;
+}
+
+
+video{
+	width: 100%  !important;
+	height: auto !important;
+	background:transparent url('../video/trumpet-layout.jpg') no-repeat 0 0; 
+   -webkit-background-size:cover; 
+   -moz-background-size:cover; 
+   -o-background-size:cover; 
+   background-size:cover; 
+	
+	
+}
+
+
+
+
 
 
 #class-details .top-image {
@@ -403,7 +467,7 @@ main .inner-container {
 }
 
 .inner-containerText {
-		background: linear-gradient(#fff -20%, #ffecd2 52%, #fff 100%);
+	background: linear-gradient(#fff -20%, #ffecd2 52%, #fff 100%);
 	border-radius: 20% 0 20% 0;
 	border-top: 2px solid #f00;
 	border-bottom: 2px solid #f00;
@@ -414,6 +478,7 @@ main .inner-container {
 
 #class-details h2 {
 	font-size: 1.5em;
+	margin-top: 36px;
 }
 
 
@@ -435,11 +500,16 @@ address {
 
 
 
-.divide-mobile {
+.divide {
 	height: 5px;
 	border-style: none;
 	background: #f00;
 	box-shadow: 0 1px 1px 1px #666666;
+}
+
+
+#about-danceClass .divide {
+	margin-top: -5px;
 }
 
 
@@ -698,16 +768,29 @@ MEDIA QUERIES
 	}
 	
 	
-	p, address {
+	p,
+	address {
 		font-size: 1.4em;
 	}
 	
 	
 	#commercial-wrapper h3,
-	#lyrical-wrapper h3 {
+	#lyrical-wrapper h3,
+	.top_left-wrap h3,
+ .bottom_right-wrap h3{
 		font-size: 1.8rem;
 	}
 	
+	
+	
+	#about-sam .dance-style-text {
+		width: 500px;
+	}
+	
+	#about-sam p {
+		text-align: left;
+		padding: 1em 2em 1em 2em;
+	}
 	
 	.back-to-top {
 		font-size: 1.3rem;
@@ -733,14 +816,37 @@ MEDIA QUERIES
 	}
 	
 	.main-nav .inner-container,
-	#menu-nav {
+	#menu-nav,
+	#home-banner .inner-container,
+	#class-details .inner-container,
+	#about-banner .inner-container,
+	#about-danceClass .inner-container{
 		display: flex;
 		justify-content: space-between;
 		/*border: 2px solid green;*/
 	}
 	
 	
+	#home-banner .inner-container,
+	#class-details .inner-container,
+	#about-banner .inner-container,
+	#about-danceClass .inner-container{
+		justify-content: center;
+		align-items: flex-start;
+		/*border: 1px solid blue;*/
+		
+}
 	
+	#about-danceClass .inner-containerText {
+		align-self: center;
+		margin-top: 160px;
+	}
+	
+	
+	#about-danceClass .inner-containerText p{
+		text-align: left;
+		font-size: 1.2em;
+	}
 	
 	#menu-nav {
 		flex-direction: row;
@@ -750,7 +856,8 @@ MEDIA QUERIES
 	
 	
 	#home-banner img,
-	#class-details img{
+	#class-details img,
+	#about-danceClass img{
 		display: block;
 		
 	}
@@ -760,10 +867,17 @@ MEDIA QUERIES
 		background: linear-gradient(#fff 0%, #fff 87%, #ffecd2 100%);
 	}
 	
+	#about-banner {
+		background: linear-gradient(#fff 0%, #fff 92%, #ffecd2 100%);
+	}
+	
+	
+	
 	
 	#home-banner img ,
 	.versatile-dancerText .inner-container,
-	.dance-style-text {
+	.dance-style-text,
+	#about-danceClass img{
 		width: 300px;
 	}
 
@@ -775,14 +889,7 @@ MEDIA QUERIES
 	}
 	
 	
-	#home-banner .inner-container,
-	#class-details .inner-container {
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
-		/*border: 1px solid blue;*/
-		
-}
+	
 	
 	#class-details  {
 		background: #fff;
@@ -801,7 +908,10 @@ MEDIA QUERIES
 		width: 150px;
 	}
 	
-	
+	#about-danceClass .top-image,
+	#about-danceClass .bottom-image {
+		width: 100px;
+	}
 	
 	
 	.inner-containerText {
@@ -853,6 +963,14 @@ MEDIA QUERIES
 	#home-banner .name {
 		font-size: 3.5em;
 	}
+	
+	
+	#about-banner img {
+		display: block;
+		width: 300px;
+	}
+	
+	
 	
 	.versatile-dancerText .inner-container{
 		height: 200px;
