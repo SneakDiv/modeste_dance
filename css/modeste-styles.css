@@ -452,7 +452,7 @@ main .inner-container {
 video{
 	width: 100%  !important;
 	height: auto !important;
-	background:transparent url('../video/trumpet-layout.jpg') no-repeat 0 0; 
+	background:transparent url('../video/trans.png') no-repeat 0 0; 
    -webkit-background-size:cover; 
    -moz-background-size:cover; 
    -o-background-size:cover; 
