@@ -45,6 +45,7 @@ p {
 
 img {
 	max-width: 100%;
+	margin-top: 1em;
 	margin-bottom: 1.25em;
 	/*border: 2px solid #CF3;*/
 }
@@ -57,7 +58,7 @@ a {
 
 
 
-a:visited {
+a:visited{
 	color: #2f0707;
 }
 
@@ -65,11 +66,26 @@ a:visited {
 a:hover,
 .back-to-top:hover,
 .main-footer .go-to:hover,
-.main-footer a:hover{
+.main-footer a:hover {
 	transform: scale(1.1);
 	transition: all.5s;
 	cursor: pointer;
 }
+
+
+a:active,
+.back-to-top:active,
+.main-footer .go-to:active,
+.main-footer a:active {
+	color: #f00;
+}
+
+a:focus,
+.back-to-top:focus,
+.main-footer .go-to:focus,
+.main-footer a:focus {
+	outline: none;
+} 
 
 
 /*******************************************************************
@@ -568,9 +584,7 @@ a[href^="tel:"] {
 	justify-content: center;
 }
 
-.social-media {
-	display: none;
-}
+
 
 
 .socialMedia-links {
@@ -1101,7 +1115,6 @@ MEDIA QUERIES
 	#lyrical-wrapper h3 {
 		font-size: 2rem;
 	}
-	
 	
 	
 	
